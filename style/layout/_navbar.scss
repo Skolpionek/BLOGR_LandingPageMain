@@ -20,6 +20,7 @@ nav{
             font-family: $Ubuntu;
             font-weight: $Ubuntu2;
             font-size: $Size;
+            padding: 20px 0;
             cursor: pointer;
             &::after{
                content: "";
@@ -31,16 +32,9 @@ nav{
                background-position: center;
                position: absolute;
                right: -20px;
-               top: 40%;
+               top: 45%;
             }
-            &:hover{
-               text-decoration: underline;
-               bottom: 2px solid $White;
-            }
-            @import '../components/dropdown';
-         }
-         .active{
-            &::after{
+            &:hover::after{
                content: "";
                width: 10px;
                height: 10px;
@@ -50,11 +44,19 @@ nav{
                background-position: center;
                position: absolute;
                right: -20px;
-               top: 35%;
+               top: 40%;
                transform: rotateZ(180deg);
 
             }
+            &:hover{
+               text-decoration: underline;
+               bottom: 2px solid $White;
+            }
+            @import '../components/dropdown';
          }
+
+            
+
       }
       @import '../components/buttons';
    }

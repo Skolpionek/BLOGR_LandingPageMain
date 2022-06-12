@@ -1,4 +1,8 @@
+&:hover .DropdownContainer{
+   display: flex;
+}
 .DropdownContainer{
+   display: none;
    margin-top: 20px;
    margin-left: -15px;
    background-color: $White;
@@ -7,7 +11,7 @@
    padding: 25px 20px;
    position: absolute;
    color: black;
-   display: flex;
+
    flex-direction: column;
    box-shadow: 0 0 10px black;
    gap: 5px;

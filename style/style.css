@@ -99,6 +99,7 @@ nav .MenuContainer .NavItemsContainer .ListItem {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   font-size: 16px;
+  padding: 20px 0;
   cursor: pointer;
 }
 nav .MenuContainer .NavItemsContainer .ListItem::after {
@@ -111,13 +112,30 @@ nav .MenuContainer .NavItemsContainer .ListItem::after {
   background-position: center;
   position: absolute;
   right: -20px;
+  top: 45%;
+}
+nav .MenuContainer .NavItemsContainer .ListItem:hover::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-image: url(../../images/icon-arrow-light.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  right: -20px;
   top: 40%;
+  transform: rotateZ(180deg);
 }
 nav .MenuContainer .NavItemsContainer .ListItem:hover {
   text-decoration: underline;
   bottom: 2px solid hsl(0deg, 0%, 100%);
 }
+nav .MenuContainer .NavItemsContainer .ListItem:hover .DropdownContainer {
+  display: flex;
+}
 nav .MenuContainer .NavItemsContainer .ListItem .DropdownContainer {
+  display: none;
   margin-top: 20px;
   margin-left: -15px;
   background-color: hsl(0deg, 0%, 100%);
@@ -126,7 +144,6 @@ nav .MenuContainer .NavItemsContainer .ListItem .DropdownContainer {
   padding: 25px 20px;
   position: absolute;
   color: black;
-  display: flex;
   flex-direction: column;
   box-shadow: 0 0 10px black;
   gap: 5px;
@@ -140,19 +157,6 @@ nav .MenuContainer .NavItemsContainer .ListItem .DropdownContainer .DropdownItem
 }
 nav .MenuContainer .NavItemsContainer .ListItem .DropdownContainer .DropdownItem:hover {
   font-weight: 500;
-}
-nav .MenuContainer .NavItemsContainer .active::after {
-  content: "";
-  width: 10px;
-  height: 10px;
-  background-image: url(../../images/icon-arrow-light.svg);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  right: -20px;
-  top: 35%;
-  transform: rotateZ(180deg);
 }
 nav .MenuContainer .buttons {
   display: flex;
