@@ -1,2 +1,61 @@
 @import '../res/variables';
 
+nav{
+   padding:4vh 8vh;
+   display: flex;
+   height: 120px;
+   gap: 50px;
+   .MenuContainer{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      .NavItemsContainer{
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         width: 300px;
+         .ListItem{
+            position: relative;
+            color: $White;
+            font-family: $Ubuntu;
+            font-weight: $Ubuntu2;
+            font-size: $Size;
+            cursor: pointer;
+            &::after{
+               content: "";
+               width: 10px;
+               height: 10px;
+               background-image: url(../../images/icon-arrow-light.svg);
+               background-size: 100%;
+               background-repeat: no-repeat;
+               background-position: center;
+               position: absolute;
+               right: -20px;
+               top: 40%;
+            }
+            &:hover{
+               text-decoration: underline;
+               bottom: 2px solid $White;
+            }
+            @import '../components/dropdown';
+         }
+         .active{
+            &::after{
+               content: "";
+               width: 10px;
+               height: 10px;
+               background-image: url(../../images/icon-arrow-light.svg);
+               background-size: 100%;
+               background-repeat: no-repeat;
+               background-position: center;
+               position: absolute;
+               right: -20px;
+               top: 35%;
+               transform: rotateZ(180deg);
+
+            }
+         }
+      }
+      @import '../components/buttons';
+   }
+}

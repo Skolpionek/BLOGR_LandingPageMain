@@ -1,6 +1,6 @@
-@import './layout/navbar';
 @import './res/variables';
 @import './res/reset';
+@import './layout/navbar';
 
 .backgroundImage{
    .BGIMG{
@@ -13,7 +13,7 @@
    overflow: hidden;
    position: relative;
    height: 400px;
-   border-radius: 0 0 50px 50px;
+   border-radius: 0 0 0 50px;
    background: $Gradient1A;
    background-image:linear-gradient(90deg, $Gradient1A 0%, $Gradient1B 100%);
    // background-image: url(../../images/bg-pattern-intro-desktop.svg);
