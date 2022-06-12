@@ -1,9 +1,9 @@
 @import '../res/variables';
 
 nav{
-   padding:4vh 8vh;
+   margin:8vh 12vh;
    display: flex;
-   height: 120px;
+   height: 80px;
    gap: 50px;
    .MenuContainer{
       display: flex;
@@ -34,7 +34,7 @@ nav{
                right: -20px;
                top: 45%;
             }
-            &:hover::after{
+            &:hover::after,&:focus::after{
                content: "";
                width: 10px;
                height: 10px;
