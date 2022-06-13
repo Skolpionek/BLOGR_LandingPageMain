@@ -1,11 +1,15 @@
 @import '../res/variables';
 
 nav{
-   margin:8vh 12vh;
+   box-sizing: content-box;
+   padding: 8vh 12vh;
    display: flex;
    height: 80px;
    gap: 50px;
    align-items: center;
+   .hamburger{
+      display: none;
+   }
    .logo{
       height: 70%;
    }
@@ -65,3 +69,101 @@ nav{
       @import '../components/buttons';
    }
 }
+
+@media only screen and (max-width: 1030px){
+   nav{
+      padding: 5vh 5vh;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      .hamburger{
+         display: block;
+         cursor: pointer;
+         width: 40px;
+         height: 40px;
+         background-image: url(../../images/icon-hamburger.svg);
+         z-index: 100;
+         background-size: 100%;
+         background-repeat: no-repeat;
+         background-position: center;
+      }
+      .hamburger.active{
+         background-image: url(../../images/icon-close.svg);
+      }
+      .MenuContainer{
+         transition: transform 0.2s;
+         transform: translateX(-120%);//dadada//
+         box-shadow: 0 0 10px black;
+         position: absolute;
+         top: 175px;
+         left: 3.5vw;
+         background-color: $White;
+         flex-direction: column;
+         z-index: 100;
+         align-items: center;
+         padding: 20px 30px;
+         border-radius: 10px;
+         box-sizing: border-box;
+         width: 90vw;
+         .NavItemsContainer{
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            border-bottom: 1px solid $GrayishBlue;
+            margin-bottom: 20px;
+            .ListItem{
+               text-decoration: none !important;
+               text-align: center;
+               position: relative;
+               color: $VeryDarkBlue;
+               font-family: $Ubuntu;
+               font-weight: $Ubuntu2;
+               font-size: $Size;
+               padding: 0;
+               cursor: pointer;
+               &::after{
+                  content: "";
+                  width: 10px;
+                  height: 10px;
+                  background-image: url(../../images/icon-arrow-dark.svg);
+                  background-size: 100%;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  position: absolute;
+                  right: 29%;
+                  top: 20%;
+
+               }
+               &:hover::after,&:focus::after{
+                  content: "";
+                  width: 10px;
+                  height: 10px;
+                  background-image: url(../../images/../../images/icon-arrow-dark.svg);
+                  background-size: 100%;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  position: absolute;
+                  right: 29%;
+                  top: 7px;
+                  transform: rotateZ(180deg);
+   
+               }
+               &:hover{
+                  text-decoration: underline;
+                  bottom: 2px solid $White;
+               }
+               @import '../components/dropdown';
+            }
+            
+               
+   
+         }
+         @import '../components/buttons';
+      }
+      .active{
+         transition: transform 0.2s;
+         transform: translateX(0);
+      }
+      }
+   }

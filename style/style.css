@@ -88,11 +88,15 @@ select {
 }
 /*(CTA text)*/
 nav {
-  margin: 8vh 12vh;
+  box-sizing: content-box;
+  padding: 8vh 12vh;
   display: flex;
   height: 80px;
   gap: 50px;
   align-items: center;
+}
+nav .hamburger {
+  display: none;
 }
 nav .logo {
   height: 70%;
@@ -148,6 +152,9 @@ nav .MenuContainer .NavItemsContainer .ListItem:hover {
 }
 nav .MenuContainer .NavItemsContainer .ListItem:hover .DropdownContainer, nav .MenuContainer .NavItemsContainer .ListItem:focus .DropdownContainer {
   display: flex;
+  padding: 25px 20px;
+  height: auto;
+  transition: padding 0.5s;
 }
 nav .MenuContainer .NavItemsContainer .ListItem .DropdownContainer {
   display: none;
@@ -159,6 +166,7 @@ nav .MenuContainer .NavItemsContainer .ListItem .DropdownContainer {
   padding: 25px 20px;
   position: absolute;
   color: black;
+  margin-bottom: 20px;
   flex-direction: column;
   box-shadow: 0 0 10px black;
   gap: 5px;
@@ -173,10 +181,41 @@ nav .MenuContainer .NavItemsContainer .ListItem .DropdownContainer .DropdownItem
 nav .MenuContainer .NavItemsContainer .ListItem .DropdownContainer .DropdownItem:hover {
   font-weight: 500;
 }
+@media only screen and (max-width: 1030px) {
+  nav .MenuContainer .NavItemsContainer .ListItem .DropdownContainer {
+    transition: padding 0.5s;
+    padding: 0;
+    height: 0;
+    display: flex;
+    background-color: hsla(240deg, 3%, 79%, 0.273);
+    width: 250px;
+    position: relative;
+    align-items: center;
+    box-shadow: none;
+    overflow: hidden;
+  }
+  nav .MenuContainer .NavItemsContainer .ListItem .DropdownContainer .DropdownItem {
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    border-bottom: 0;
+    color: hsl(208deg, 49%, 24%);
+  }
+  nav .MenuContainer .NavItemsContainer .ListItem .DropdownContainer .DropdownItem:hover {
+    font-weight: 500;
+  }
+}
 nav .MenuContainer .buttons {
   display: flex;
   align-items: center;
   gap: 10px;
+  z-index: 10;
+}
+@media only screen and (max-width: 1030px) {
+  nav .MenuContainer .buttons {
+    flex-direction: column;
+  }
 }
 nav .MenuContainer .buttons button {
   color: hsl(0deg, 0%, 100%);
@@ -208,12 +247,239 @@ nav .MenuContainer .buttons .LearnMore, nav .MenuContainer .buttons .StartforFre
   padding: clamp(5px, 1vw, 15px) clamp(25px, 3vw, 40px);
   font-size: larger;
 }
+@media only screen and (max-width: 1030px) {
+  nav .MenuContainer .buttons button {
+    color: hsl(208deg, 49%, 24%);
+  }
+  nav .MenuContainer .buttons .LearnMore {
+    color: hsl(0deg, 0%, 100%);
+  }
+  nav .MenuContainer .buttons .SignUp {
+    background: #ff8f70;
+    background-image: linear-gradient(90deg, #ff8f70 0%, #ff3d54 100%);
+    color: hsl(0deg, 0%, 100%);
+  }
+}
 
+@media only screen and (max-width: 1030px) {
+  nav {
+    padding: 5vh 5vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  nav .hamburger {
+    display: block;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-image: url(../../images/icon-hamburger.svg);
+    z-index: 100;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  nav .hamburger.active {
+    background-image: url(../../images/icon-close.svg);
+  }
+  nav .MenuContainer {
+    transition: transform 0.2s;
+    transform: translateX(-120%);
+    box-shadow: 0 0 10px black;
+    position: absolute;
+    top: 175px;
+    left: 3.5vw;
+    background-color: hsl(0deg, 0%, 100%);
+    flex-direction: column;
+    z-index: 100;
+    align-items: center;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 90vw;
+  }
+  nav .MenuContainer .NavItemsContainer {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 1px solid hsl(240deg, 2%, 79%);
+    margin-bottom: 20px;
+  }
+  nav .MenuContainer .NavItemsContainer .ListItem {
+    text-decoration: none !important;
+    text-align: center;
+    position: relative;
+    color: hsl(208deg, 49%, 24%);
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0;
+    cursor: pointer;
+  }
+  nav .MenuContainer .NavItemsContainer .ListItem::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-image: url(../../images/icon-arrow-dark.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 29%;
+    top: 20%;
+  }
+  nav .MenuContainer .NavItemsContainer .ListItem:hover::after, nav .MenuContainer .NavItemsContainer .ListItem:focus::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-image: url(../../images/../../images/icon-arrow-dark.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 29%;
+    top: 7px;
+    transform: rotateZ(180deg);
+  }
+  nav .MenuContainer .NavItemsContainer .ListItem:hover {
+    text-decoration: underline;
+    bottom: 2px solid hsl(0deg, 0%, 100%);
+  }
+  nav .MenuContainer .NavItemsContainer .ListItem:hover .DropdownContainer, nav .MenuContainer .NavItemsContainer .ListItem:focus .DropdownContainer {
+    display: flex;
+    padding: 25px 20px;
+    height: auto;
+    transition: padding 0.5s;
+  }
+  nav .MenuContainer .NavItemsContainer .ListItem .DropdownContainer {
+    display: none;
+    margin-top: 20px;
+    margin-left: -15px;
+    background-color: hsl(0deg, 0%, 100%);
+    width: 150px;
+    border-radius: 5px;
+    padding: 25px 20px;
+    position: absolute;
+    color: black;
+    margin-bottom: 20px;
+    flex-direction: column;
+    box-shadow: 0 0 10px black;
+    gap: 5px;
+    cursor: default;
+  }
+  nav .MenuContainer .NavItemsContainer .ListItem .DropdownContainer .DropdownItem {
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+  }
+  nav .MenuContainer .NavItemsContainer .ListItem .DropdownContainer .DropdownItem:hover {
+    font-weight: 500;
+  }
+}
+@media only screen and (max-width: 1030px) and (max-width: 1030px) {
+  nav .MenuContainer .NavItemsContainer .ListItem .DropdownContainer {
+    transition: padding 0.5s;
+    padding: 0;
+    height: 0;
+    display: flex;
+    background-color: hsla(240deg, 3%, 79%, 0.273);
+    width: 250px;
+    position: relative;
+    align-items: center;
+    box-shadow: none;
+    overflow: hidden;
+  }
+  nav .MenuContainer .NavItemsContainer .ListItem .DropdownContainer .DropdownItem {
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    border-bottom: 0;
+    color: hsl(208deg, 49%, 24%);
+  }
+  nav .MenuContainer .NavItemsContainer .ListItem .DropdownContainer .DropdownItem:hover {
+    font-weight: 500;
+  }
+}
+@media only screen and (max-width: 1030px) {
+  nav .MenuContainer .buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 10;
+  }
+}
+@media only screen and (max-width: 1030px) and (max-width: 1030px) {
+  nav .MenuContainer .buttons {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 1030px) {
+  nav .MenuContainer .buttons button {
+    color: hsl(0deg, 0%, 100%);
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: transparent;
+    border: 0;
+    padding: 5px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 1030px) {
+  nav .MenuContainer .buttons .SignUp, nav .MenuContainer .buttons .StartforFree {
+    background-color: hsl(0deg, 0%, 100%);
+    color: hsl(356deg, 100%, 66%);
+  }
+  nav .MenuContainer .buttons .SignUp:hover, nav .MenuContainer .buttons .StartforFree:hover {
+    background-color: rgba(255, 255, 255, 0.445);
+    color: hsl(0deg, 0%, 100%);
+  }
+}
+@media only screen and (max-width: 1030px) {
+  nav .MenuContainer .buttons .LearnMore {
+    border: 1px solid hsl(0deg, 0%, 100%);
+  }
+  nav .MenuContainer .buttons .LearnMore:hover {
+    background-color: hsl(0deg, 0%, 100%);
+    color: hsl(356deg, 100%, 66%);
+  }
+}
+@media only screen and (max-width: 1030px) {
+  nav .MenuContainer .buttons .LearnMore, nav .MenuContainer .buttons .StartforFree {
+    padding: clamp(5px, 1vw, 15px) clamp(25px, 3vw, 40px);
+    font-size: larger;
+  }
+}
+@media only screen and (max-width: 1030px) and (max-width: 1030px) {
+  nav .MenuContainer .buttons button {
+    color: hsl(208deg, 49%, 24%);
+  }
+  nav .MenuContainer .buttons .LearnMore {
+    color: hsl(0deg, 0%, 100%);
+  }
+  nav .MenuContainer .buttons .SignUp {
+    background: #ff8f70;
+    background-image: linear-gradient(90deg, #ff8f70 0%, #ff3d54 100%);
+    color: hsl(0deg, 0%, 100%);
+  }
+}
+@media only screen and (max-width: 1030px) {
+  nav .active {
+    transition: transform 0.2s;
+    transform: translateX(0);
+  }
+}
 header {
   margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 10;
 }
 header .title {
   color: hsl(0deg, 0%, 100%);
@@ -235,6 +501,12 @@ header .buttons {
   display: flex;
   align-items: center;
   gap: 10px;
+  z-index: 10;
+}
+@media only screen and (max-width: 1030px) {
+  header .buttons {
+    flex-direction: column;
+  }
 }
 header .buttons button {
   color: hsl(0deg, 0%, 100%);
@@ -265,6 +537,19 @@ header .buttons .LearnMore:hover {
 header .buttons .LearnMore, header .buttons .StartforFree {
   padding: clamp(5px, 1vw, 15px) clamp(25px, 3vw, 40px);
   font-size: larger;
+}
+@media only screen and (max-width: 1030px) {
+  header .buttons button {
+    color: hsl(208deg, 49%, 24%);
+  }
+  header .buttons .LearnMore {
+    color: hsl(0deg, 0%, 100%);
+  }
+  header .buttons .SignUp {
+    background: #ff8f70;
+    background-image: linear-gradient(90deg, #ff8f70 0%, #ff3d54 100%);
+    color: hsl(0deg, 0%, 100%);
+  }
 }
 
 main {
@@ -460,14 +745,20 @@ footer .attribution a {
 }
 
 .backgroundImage {
-  overflow: hidden;
   position: relative;
-  height: 70vh;
+  height: 675px;
   border-radius: 0 0 0 100px;
   background: #ff8f70;
   background-image: linear-gradient(90deg, #ff8f70 0%, #ff3d54 100%);
 }
-.backgroundImage .BGIMG {
+.backgroundImage .wrapper {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 0 100px;
+  position: absolute;
+}
+.backgroundImage .wrapper .BGIMG {
   position: absolute;
   inset: 0;
   background-image: url(../images/bg-pattern-intro-desktop.svg);

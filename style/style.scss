@@ -6,16 +6,24 @@
 @import './layout/footer';
 
 .backgroundImage{
-   .BGIMG{
+   .wrapper{
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      border-radius: 0 0 0 100px;
       position: absolute;
-      inset: 0;
-      background-image: url(../images/bg-pattern-intro-desktop.svg);
-      background-size: 200%;
-      background-position: 30% 50%;
+      .BGIMG{
+         position: absolute;
+         inset: 0;
+         background-image: url(../images/bg-pattern-intro-desktop.svg);
+         background-size: 200%;
+         background-position: 30% 50%;
+      }
    }
-   overflow: hidden;
+   
+   
    position: relative;
-   height: 70vh;
+   height: 675px;
    border-radius: 0 0 0 100px;
    background: $Gradient1A;
    background-image:linear-gradient(90deg, $Gradient1A 0%, $Gradient1B 100%);

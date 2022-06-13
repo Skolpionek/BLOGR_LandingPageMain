@@ -1,5 +1,8 @@
 &:hover .DropdownContainer,&:focus .DropdownContainer{
    display: flex;
+   padding: 25px 20px;
+   height: auto;
+   transition: padding 0.5s;
 }
 .DropdownContainer{
    display: none;
@@ -11,7 +14,7 @@
    padding: 25px 20px;
    position: absolute;
    color: black;
-
+   margin-bottom: 20px;
    flex-direction: column;
    box-shadow: 0 0 10px black;
    gap: 5px;
@@ -23,6 +26,32 @@
       font-weight: $Ubuntu1;
       &:hover{
          font-weight: $Ubuntu2;
+      }
+   }
+}
+
+@media only screen and (max-width: 1030px){
+   .DropdownContainer{
+      transition: padding 0.5s;
+      padding: 0;
+      height: 0;
+      display: flex;
+      background-color: hsla(240, 3%, 79%, 0.273);
+      width: 250px;
+      position: relative;
+      align-items: center;
+      box-shadow: none;
+      overflow: hidden;
+      .DropdownItem{
+         cursor: pointer;
+         font-size: $Size;
+         font-family: $Ubuntu;
+         font-weight: $Ubuntu1;
+         border-bottom: 0;
+         color: $VeryDarkBlue;
+         &:hover{
+            font-weight: $Ubuntu2;
+         }
       }
    }
 }
