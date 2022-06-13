@@ -14,12 +14,19 @@
       cursor: pointer;
       
    }
-   .SignUp{
+   .SignUp,.StartforFree{
       background-color: $White;
       color: $LightRed;
       &:hover{
          background-color: rgba(255, 255, 255, 0.445);
          color: $White;
+      }
+   }
+   .LearnMore{
+      border: 1px solid $White;
+      &:hover{
+         background-color: $White;
+         color: $LightRed;
       }
    }
    

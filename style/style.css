@@ -81,6 +81,10 @@ nav {
   display: flex;
   height: 80px;
   gap: 50px;
+  align-items: center;
+}
+nav .logo {
+  height: 70%;
 }
 nav .MenuContainer {
   display: flex;
@@ -174,13 +178,73 @@ nav .MenuContainer .buttons button {
   border-radius: 25px;
   cursor: pointer;
 }
-nav .MenuContainer .buttons .SignUp {
+nav .MenuContainer .buttons .SignUp, nav .MenuContainer .buttons .StartforFree {
   background-color: hsl(0deg, 0%, 100%);
   color: hsl(356deg, 100%, 66%);
 }
-nav .MenuContainer .buttons .SignUp:hover {
+nav .MenuContainer .buttons .SignUp:hover, nav .MenuContainer .buttons .StartforFree:hover {
   background-color: rgba(255, 255, 255, 0.445);
   color: hsl(0deg, 0%, 100%);
+}
+nav .MenuContainer .buttons .LearnMore {
+  border: 1px solid hsl(0deg, 0%, 100%);
+}
+nav .MenuContainer .buttons .LearnMore:hover {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(356deg, 100%, 66%);
+}
+
+header {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header .title {
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+  font-size: clamp(25px, 5vw, 80px);
+}
+header .subTitle {
+  color: rgb(211, 211, 211);
+  font-family: "Overpass", sans-serif;
+  font-weight: 300;
+  font-size: clamp(15px, 2vw, 30px);
+}
+header .buttons {
+  margin-top: 30px;
+}
+header .buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+header .buttons button {
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  background-color: transparent;
+  border: 0;
+  padding: 5px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+header .buttons .SignUp, header .buttons .StartforFree {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(356deg, 100%, 66%);
+}
+header .buttons .SignUp:hover, header .buttons .StartforFree:hover {
+  background-color: rgba(255, 255, 255, 0.445);
+  color: hsl(0deg, 0%, 100%);
+}
+header .buttons .LearnMore {
+  border: 1px solid hsl(0deg, 0%, 100%);
+}
+header .buttons .LearnMore:hover {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(356deg, 100%, 66%);
 }
 
 .backgroundImage {

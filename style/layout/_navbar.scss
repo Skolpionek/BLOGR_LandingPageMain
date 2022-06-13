@@ -5,6 +5,10 @@ nav{
    display: flex;
    height: 80px;
    gap: 50px;
+   align-items: center;
+   .logo{
+      height: 70%;
+   }
    .MenuContainer{
       display: flex;
       justify-content: space-between;

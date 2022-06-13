@@ -1,0 +1,22 @@
+header{
+   margin-top: 100px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   .title{
+      color: $White;
+      font-family: $Overpass;
+      font-weight: $Overpass2;
+      font-size: clamp(25px,5vw,80px);
+   }
+   .subTitle{
+      color: rgb(211, 211, 211);
+      font-family: $Overpass;
+      font-weight: $Overpass1;
+      font-size: clamp(15px,2vw,30px)
+   }
+   .buttons{
+      margin-top: 30px;
+   }
+   @import '../components/buttons';
+}
