@@ -587,12 +587,46 @@ main .section-1 .image {
   width: 40%;
   position: relative;
 }
-main .section-1 .image img {
+main .section-1 .image .imageDesktop {
   position: absolute;
   right: 0;
   top: 40%;
   width: clamp(800px, 50vw, 1000px);
   transform: translateX(50%) translateY(-50%);
+}
+main .section-1 .image .imageMobile {
+  display: none;
+}
+@media only screen and (max-width: 1030px) {
+  main .section-1 {
+    align-items: center;
+    height: auto;
+    flex-direction: column-reverse;
+  }
+  main .section-1 article {
+    width: 90%;
+  }
+  main .section-1 article .SectionTitle {
+    font-size: clamp(30px, 2vw, 35px);
+    text-align: center;
+  }
+  main .section-1 article .SectionParagraph {
+    font-size: clamp(20px, 1vw, 24px);
+    text-align: center;
+  }
+  main .section-1 .image {
+    margin-top: 20px;
+    width: 100%;
+    position: static;
+  }
+  main .section-1 .image .imageDesktop {
+    display: none;
+  }
+  main .section-1 .image .imageMobile {
+    display: block;
+    margin: auto;
+    width: 100%;
+  }
 }
 main .section-2 {
   background: rgb(44, 45, 63);
@@ -610,6 +644,7 @@ main .section-2 .wrapper {
   position: absolute;
   height: 100%;
   width: 100%;
+  border-radius: 0 100px 0 100px;
 }
 main .section-2 .wrapper .ImgCircles {
   position: absolute;
@@ -654,11 +689,66 @@ main .section-2 article .SectionParagraph {
     height: 80%;
   }
 }
+@media only screen and (max-width: 1030px) {
+  main .section-2 {
+    min-height: 700px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50vw;
+    gap: 0;
+    position: relative;
+  }
+  main .section-2 .wrapper {
+    overflow: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 0 100px 0 100px;
+  }
+  main .section-2 .wrapper .ImgCircles {
+    position: absolute;
+    left: -30%;
+    bottom: 30%;
+    height: 120%;
+  }
+  main .section-2 .images {
+    width: 90%;
+    height: 45vw;
+  }
+  main .section-2 .images .ImgPhones {
+    bottom: 0;
+    left: 0;
+    right: -20%;
+    position: absolute;
+    top: -50vw;
+    height: auto;
+    width: 100%;
+  }
+  main .section-2 article {
+    z-index: 999;
+    width: 90%;
+  }
+  main .section-2 article .SectionTitle {
+    color: hsl(0deg, 0%, 100%);
+    font-size: 40px;
+    font-family: "Overpass", sans-serif;
+    text-align: center;
+  }
+  main .section-2 article .SectionParagraph {
+    margin-top: 25px;
+    color: hsl(0deg, 0%, 100%);
+    font-family: "Overpass", sans-serif;
+    opacity: 0.8;
+    font-size: 20px;
+    text-align: center;
+  }
+}
 main .section-3 {
   display: flex;
   justify-content: center;
   gap: 10%;
-  height: 100vh;
+  height: 965px;
   align-items: center;
   padding-top: 75px;
 }
@@ -666,12 +756,15 @@ main .section-3 .images {
   position: relative;
   width: 20%;
 }
-main .section-3 .images img {
+main .section-3 .images .imageDesktop {
   position: absolute;
   left: 0%;
   top: 40%;
   width: clamp(800px, 50vw, 1000px);
   transform: translateX(-58%) translateY(-50%);
+}
+main .section-3 .images .imageMobile {
+  display: none;
 }
 main .section-3 article {
   width: 40%;
@@ -687,6 +780,43 @@ main .section-3 article .SectionParagraph {
   font-size: clamp(16px, 1.3vw, 28px);
   font-family: "Overpass", sans-serif;
   margin-bottom: 5rem;
+}
+@media only screen and (max-width: 1030px) {
+  main .section-3 {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    align-items: center;
+    flex-direction: column;
+  }
+  main .section-3 .images {
+    width: 100%;
+  }
+  main .section-3 .images .imageDesktop {
+    display: none;
+  }
+  main .section-3 .images .imageMobile {
+    display: block;
+    margin: auto;
+    width: 100%;
+  }
+  main .section-3 article {
+    width: 80%;
+  }
+  main .section-3 article .SectionTitle {
+    color: hsl(208deg, 49%, 24%);
+    font-family: "Overpass", sans-serif;
+    font-size: 35px;
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+  main .section-3 article .SectionParagraph {
+    color: hsl(207deg, 13%, 34%);
+    font-size: 20px;
+    font-family: "Overpass", sans-serif;
+    margin-bottom: 5rem;
+    text-align: center;
+  }
 }
 
 footer {
@@ -744,6 +874,59 @@ footer .attribution a {
   color: hsl(209deg, 100%, 50%);
 }
 
+@media only screen and (max-width: 1030px) {
+  footer {
+    background-color: hsl(240deg, 10%, 16%);
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 75px;
+    padding-bottom: 20px;
+    padding-left: 0;
+    position: relative;
+  }
+  footer .logoContainer {
+    width: 100%;
+    display: flex;
+    margin-bottom: 50px;
+  }
+  footer .logoContainer .logo {
+    width: clamp(125px, 10vw, 200px);
+    margin: auto;
+  }
+  footer ul {
+    width: 25%;
+    font-family: "Ubuntu", sans-serif;
+    color: hsl(0deg, 0%, 100%);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 20px;
+    padding-left: 0;
+  }
+  footer ul li {
+    font-weight: 400;
+    opacity: 0.6;
+    list-style: none;
+    cursor: pointer;
+  }
+  footer ul li:hover {
+    text-decoration: underline;
+  }
+  footer ul .title {
+    font-weight: 500;
+    opacity: 1;
+    margin-bottom: 20px;
+    cursor: text;
+  }
+  footer ul .title:hover {
+    text-decoration: none;
+  }
+}
 .backgroundImage {
   position: relative;
   height: 675px;

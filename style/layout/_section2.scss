@@ -13,6 +13,7 @@
       position: absolute;
       height: 100%;
       width: 100%;
+      border-radius: 0 100px 0 100px;
       .ImgCircles{
          position: absolute;
          left: -11%;
@@ -62,5 +63,61 @@
             height: 80%;
          }
       }
+   }
+}
+@media only screen and (max-width: 1030px){
+   .section-2{
+      min-height: 700px;
+      justify-content:flex-start;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 50vw;
+      gap: 0;
+      position: relative;
+      .wrapper{
+         overflow: hidden;
+         position: absolute;
+         height: 100%;
+         width: 100%;
+         border-radius: 0 100px 0 100px;
+         .ImgCircles{
+            position: absolute;
+            left: -30%;
+            bottom: 30%;
+            height: 120%;
+         }
+      }
+      .images{
+         width: 90%;
+         height: 45vw;
+         .ImgPhones{
+            bottom: 0;
+            left: 0;
+            right:-20%;
+            position: absolute;
+            top: -50vw;
+            height: auto;
+            width: 100%;
+         }
+      }
+      article{
+         z-index: 999;
+         width: 90%;
+         .SectionTitle{
+            color: $White;
+            font-size: 40px;
+            font-family: $Overpass;
+            text-align: center;
+         }
+         .SectionParagraph{
+            margin-top: 25px;
+            color: $White;
+            font-family: $Overpass;
+            opacity: 0.8;
+            font-size: 20px;
+            text-align: center;
+         }
+      }
+      
    }
 }

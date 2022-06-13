@@ -23,13 +23,47 @@
    .image{
       width: 40%;
       position: relative;
-      img{
+      .imageDesktop{
          position: absolute;
          right: 0;
          top: 40%;
          width: clamp(800px,50vw,1000px);
          transform: translateX(50%) translateY(-50%);;
       }
+      .imageMobile{
+         display: none;
+      }
    }   
 }
-
+@media only screen and (max-width: 1030px){
+   
+.section-1{
+   align-items: center;
+   height: auto;
+   flex-direction: column-reverse;
+   article{
+      width: 90%;
+      .SectionTitle{
+         font-size: clamp(30px,2vw,35px);
+         text-align: center;
+      }
+      .SectionParagraph{
+         font-size: clamp(20px,1vw,24px);
+         text-align: center;
+      }
+   }
+   .image{
+      margin-top: 20px;
+      width: 100%;
+      position: static;
+      .imageDesktop{
+         display: none;
+      }
+      .imageMobile{
+         display: block;
+         margin: auto;
+         width: 100%;
+      }
+   }   
+}
+}
