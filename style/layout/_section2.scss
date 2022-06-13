@@ -1,0 +1,53 @@
+.section-2{
+   background: rgb(44,45,63);
+   background: linear-gradient(90deg, rgba(44,45,63,1) 0%, rgba(63,65,100,1) 100%);
+   border-radius: 0 100px 0 100px;
+   height: 500px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 10%;
+   position: relative;
+   .wrapper{
+      overflow: hidden;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      .ImgCircles{
+         position: absolute;
+         left: -11%;
+         bottom: -20%;
+         height: 200%;
+      }
+   }
+   .images{
+      width: 30%;
+      height: 100%;
+      
+      .ImgPhones{
+         left: -20%;
+         position: relative;
+         top: -15%;
+         height: 140%;
+      }
+      img{
+         position: absolute;
+      }
+   }
+   article{
+      width: 35%;
+      .SectionTitle{
+         color: $White;
+         font-size: clamp(25px,2vw,45px);
+         font-family: $Overpass;
+      }
+      .SectionParagraph{
+         margin-top: 25px;
+         color: $White;
+         font-family: $Overpass;
+         opacity: 0.8;
+         font-size: 27px;
+      }
+   }
+   
+}

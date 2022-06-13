@@ -222,7 +222,8 @@ header .title {
   font-size: clamp(25px, 5vw, 80px);
 }
 header .subTitle {
-  color: rgb(211, 211, 211);
+  color: hsl(0deg, 0%, 100%);
+  opacity: 0.8;
   font-family: "Overpass", sans-serif;
   font-weight: 300;
   font-size: clamp(15px, 2vw, 30px);
@@ -267,7 +268,7 @@ header .buttons .LearnMore, header .buttons .StartforFree {
 }
 
 main {
-  padding: 10px 30px;
+  padding: 10px 0;
 }
 main .SubTitle {
   text-align: center;
@@ -280,6 +281,7 @@ main .section-1 {
   display: flex;
   justify-content: center;
   height: 65vh;
+  margin-bottom: 100px;
 }
 main .section-1 article {
   width: 40%;
@@ -307,12 +309,63 @@ main .section-1 .image img {
   width: clamp(800px, 50vw, 1000px);
   transform: translateX(50%) translateY(-50%);
 }
+main .section-2 {
+  background: rgb(44, 45, 63);
+  background: linear-gradient(90deg, rgb(44, 45, 63) 0%, rgb(63, 65, 100) 100%);
+  border-radius: 0 100px 0 100px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  position: relative;
+}
+main .section-2 .wrapper {
+  overflow: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+main .section-2 .wrapper .ImgCircles {
+  position: absolute;
+  left: -11%;
+  bottom: -20%;
+  height: 200%;
+}
+main .section-2 .images {
+  width: 30%;
+  height: 100%;
+}
+main .section-2 .images .ImgPhones {
+  left: -20%;
+  position: relative;
+  top: -15%;
+  height: 140%;
+}
+main .section-2 .images img {
+  position: absolute;
+}
+main .section-2 article {
+  width: 35%;
+}
+main .section-2 article .SectionTitle {
+  color: hsl(0deg, 0%, 100%);
+  font-size: clamp(25px, 2vw, 45px);
+  font-family: "Overpass", sans-serif;
+}
+main .section-2 article .SectionParagraph {
+  margin-top: 25px;
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Overpass", sans-serif;
+  opacity: 0.8;
+  font-size: 27px;
+}
 
 .backgroundImage {
   overflow: hidden;
   position: relative;
   height: 70vh;
-  border-radius: 0 0 0 50px;
+  border-radius: 0 0 0 100px;
   background: #ff8f70;
   background-image: linear-gradient(90deg, #ff8f70 0%, #ff3d54 100%);
 }

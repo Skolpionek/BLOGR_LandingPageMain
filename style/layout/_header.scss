@@ -10,7 +10,8 @@ header{
       font-size: clamp(25px,5vw,80px);
    }
    .subTitle{
-      color: rgb(211, 211, 211);
+      color: $White;
+      opacity: 0.8   ;
       font-family: $Overpass;
       font-weight: $Overpass1;
       font-size: clamp(15px,2vw,30px)
