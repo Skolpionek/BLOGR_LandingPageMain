@@ -360,6 +360,40 @@ main .section-2 article .SectionParagraph {
   opacity: 0.8;
   font-size: 27px;
 }
+main .section-3 {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  height: 100vh;
+  align-items: center;
+  padding-top: 75px;
+}
+main .section-3 .images {
+  position: relative;
+  width: 20%;
+}
+main .section-3 .images img {
+  position: absolute;
+  left: 0%;
+  top: 40%;
+  width: clamp(800px, 50vw, 1000px);
+  transform: translateX(-58%) translateY(-50%);
+}
+main .section-3 article {
+  width: 40%;
+}
+main .section-3 article .SectionTitle {
+  color: hsl(208deg, 49%, 24%);
+  font-family: "Overpass", sans-serif;
+  font-size: 35px;
+  margin: 1.5rem 0;
+}
+main .section-3 article .SectionParagraph {
+  color: hsl(207deg, 13%, 34%);
+  font-size: 24px;
+  font-family: "Overpass", sans-serif;
+  margin-bottom: 5rem;
+}
 
 .backgroundImage {
   overflow: hidden;
