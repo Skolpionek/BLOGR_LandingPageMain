@@ -29,5 +29,9 @@
          color: $LightRed;
       }
    }
+   .LearnMore,.StartforFree{
+      padding: clamp(5px,1vw,15px) clamp(25px,3vw,40px);
+      font-size: larger;
+   }
    
 }

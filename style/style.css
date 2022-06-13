@@ -204,6 +204,10 @@ nav .MenuContainer .buttons .LearnMore:hover {
   background-color: hsl(0deg, 0%, 100%);
   color: hsl(356deg, 100%, 66%);
 }
+nav .MenuContainer .buttons .LearnMore, nav .MenuContainer .buttons .StartforFree {
+  padding: clamp(5px, 1vw, 15px) clamp(25px, 3vw, 40px);
+  font-size: larger;
+}
 
 header {
   margin-top: 100px;
@@ -256,6 +260,10 @@ header .buttons .LearnMore {
 header .buttons .LearnMore:hover {
   background-color: hsl(0deg, 0%, 100%);
   color: hsl(356deg, 100%, 66%);
+}
+header .buttons .LearnMore, header .buttons .StartforFree {
+  padding: clamp(5px, 1vw, 15px) clamp(25px, 3vw, 40px);
+  font-size: larger;
 }
 
 main {
