@@ -26,7 +26,7 @@
       }
       .SectionParagraph{
          color: $VeryDarkGrayishBlue;
-         font-size: 24px;
+         font-size: clamp(16px,1.3vw,28px);
          font-family: $Overpass;
          margin-bottom: 5rem;
       }

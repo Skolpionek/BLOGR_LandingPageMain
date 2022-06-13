@@ -35,10 +35,11 @@
       }
    }
    article{
+      z-index: 999;
       width: 35%;
       .SectionTitle{
          color: $White;
-         font-size: clamp(25px,2vw,45px);
+         font-size: clamp(20px,2vw,45px);
          font-family: $Overpass;
       }
       .SectionParagraph{
@@ -46,8 +47,20 @@
          color: $White;
          font-family: $Overpass;
          opacity: 0.8;
-         font-size: 27px;
+         font-size: clamp(15px,2vw,27px);
       }
    }
    
+}
+@media only screen and (max-width: 1450px){
+   .section-2{
+      .images{
+         .ImgPhones{
+            left: -20%;
+            position: relative;
+            top: 15%;
+            height: 80%;
+         }
+      }
+   }
 }

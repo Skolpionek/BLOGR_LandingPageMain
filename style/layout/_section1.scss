@@ -10,12 +10,12 @@
       .SectionTitle{
          color: $VeryDarkBlue;
          font-family: $Overpass;
-         font-size: 35px;
+         font-size: clamp(20px,2vw,35px);
          margin: 1.5rem 0;
       }
       .SectionParagraph{
          color: $VeryDarkGrayishBlue;
-         font-size: 24px;
+         font-size: clamp(16px,1vw,24px);
          font-family: $Overpass;
          margin-bottom: 5rem;
       }
@@ -32,3 +32,4 @@
       }
    }   
 }
+
