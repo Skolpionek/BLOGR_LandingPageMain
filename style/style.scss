@@ -2,14 +2,15 @@
 @import './res/reset';
 @import './layout/navbar';
 @import './layout/header';
+@import './layout/main';
 
 .backgroundImage{
    .BGIMG{
       position: absolute;
       inset: 0;
       background-image: url(../images/bg-pattern-intro-desktop.svg);
-      background-size: 150%;
-      background-position: 20% 50%;
+      background-size: 200%;
+      background-position: 30% 50%;
    }
    overflow: hidden;
    position: relative;

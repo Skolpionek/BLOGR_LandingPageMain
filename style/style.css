@@ -8,6 +8,17 @@
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  position: relative;
+  overflow-y: hidden;
+}
+
 /* Remove default padding */
 ul[class],
 ol[class] {
@@ -247,6 +258,48 @@ header .buttons .LearnMore:hover {
   color: hsl(356deg, 100%, 66%);
 }
 
+main {
+  padding: 10px 30px;
+}
+main .SubTitle {
+  text-align: center;
+  color: hsl(208deg, 49%, 24%);
+  font-family: "Overpass", sans-serif;
+  font-size: clamp(20px, 5vw, 50px);
+  margin: 100px 0;
+}
+main .section-1 {
+  display: flex;
+  justify-content: center;
+  height: 65vh;
+}
+main .section-1 article {
+  width: 40%;
+}
+main .section-1 article .SectionTitle {
+  color: hsl(208deg, 49%, 24%);
+  font-family: "Overpass", sans-serif;
+  font-size: 35px;
+  margin: 1.5rem 0;
+}
+main .section-1 article .SectionParagraph {
+  color: hsl(207deg, 13%, 34%);
+  font-size: 24px;
+  font-family: "Overpass", sans-serif;
+  margin-bottom: 5rem;
+}
+main .section-1 .image {
+  width: 40%;
+  position: relative;
+}
+main .section-1 .image img {
+  position: absolute;
+  right: 0;
+  top: 40%;
+  width: clamp(800px, 50vw, 1000px);
+  transform: translateX(50%) translateY(-50%);
+}
+
 .backgroundImage {
   overflow: hidden;
   position: relative;
@@ -259,6 +312,6 @@ header .buttons .LearnMore:hover {
   position: absolute;
   inset: 0;
   background-image: url(../images/bg-pattern-intro-desktop.svg);
-  background-size: 150%;
-  background-position: 20% 50%;
+  background-size: 200%;
+  background-position: 30% 50%;
 }/*# sourceMappingURL=style.css.map */

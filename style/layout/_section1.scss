@@ -1,0 +1,33 @@
+
+.section-1{
+   display: flex;
+   justify-content: center ;
+   height: 65vh;
+
+   article{
+      width: 40%;
+      .SectionTitle{
+         color: $VeryDarkBlue;
+         font-family: $Overpass;
+         font-size: 35px;
+         margin: 1.5rem 0;
+      }
+      .SectionParagraph{
+         color: $VeryDarkGrayishBlue;
+         font-size: 24px;
+         font-family: $Overpass;
+         margin-bottom: 5rem;
+      }
+   }
+   .image{
+      width: 40%;
+      position: relative;
+      img{
+         position: absolute;
+         right: 0;
+         top: 40%;
+         width: clamp(800px,50vw,1000px);
+         transform: translateX(50%) translateY(-50%);;
+      }
+   }   
+}
